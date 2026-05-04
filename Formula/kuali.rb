@@ -5,21 +5,21 @@
 class Kuali < Formula
   desc "Connect Kuali to your AI assistant"
   homepage "https://github.com/kualico/kuali-connector"
-  version "1.0.12"
+  version "1.0.13"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.12/kuali-darwin-amd64"
-      sha256 "efaa666cae269e3e10e32e733b45532bd3ccda3e6462463e24d67f346998ac09"
+      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.13/kuali-darwin-amd64"
+      sha256 "a0f0b9d86d6c12d51b8efb6a3cf864ce3a1b4b809a3446e21e071d23f968db33"
 
       define_method(:install) do
         bin.install "kuali-darwin-amd64" => "kuali"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.12/kuali-darwin-arm64"
-      sha256 "ddb14927555f24a1c7f59ad4d0878842954802794ef227b15e070169c3cc76a9"
+      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.13/kuali-darwin-arm64"
+      sha256 "146faa529963af8e2744f59aa9b55e2db540346007d8965a93395a15139ec082"
 
       define_method(:install) do
         bin.install "kuali-darwin-arm64" => "kuali"
@@ -29,15 +29,15 @@ class Kuali < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.12/kuali-linux-amd64"
-      sha256 "820922977524782d1d87318e847d0cf8e12538ce7d8c575cc5e06b4e982ea65b"
+      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.13/kuali-linux-amd64"
+      sha256 "dfc4c8ab4e4d73f0502ccd03af593d13b14fbc95ca64ee47bd78da1d1f5ba4d5"
       define_method(:install) do
         bin.install "kuali-linux-amd64" => "kuali"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.12/kuali-linux-arm64"
-      sha256 "c0ecb6341d8a8c89d907908a31472b755180818fb041c943ca3d9d3543787f50"
+      url "https://github.com/kualico/kuali-connector/releases/download/v1.0.13/kuali-linux-arm64"
+      sha256 "d9b53871fb2bd2093992fb1c5e1f7867a384793ff207d96ed847e1738b1ffb23"
       define_method(:install) do
         bin.install "kuali-linux-arm64" => "kuali"
       end
